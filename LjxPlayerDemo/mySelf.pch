@@ -1,0 +1,15 @@
+
+
+
+#define ScreenWidth [UIScreen mainScreen].bounds.size.width
+
+#define ScreenHeight [UIScreen mainScreen].bounds.size.height
+
+#ifdef __OBJC__
+
+
+#import "LjxUi.h"
+#import "AFNetworking.h"
+#import "DeveiceUntils.h"
+
+#endif
