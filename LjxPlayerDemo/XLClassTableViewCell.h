@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+typedef void (^returnCilck)(NSInteger);
 @interface XLClassTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *colorLabel;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
@@ -27,7 +27,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *label_3;
 
-
+@property (nonatomic,copy)returnCilck click;
 
 
 

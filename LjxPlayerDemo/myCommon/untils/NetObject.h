@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-
+typedef void (^returnState)(NSInteger);
 @interface NetObject : NSObject
 
-+(NSInteger )checkNet;
-
+-(void )checkNet;
+@property(nonatomic,copy)returnState block;
 @end

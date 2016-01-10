@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="InstallHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="100"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nqN-Tv-Vkr">
+                    <rect key="frame" x="20" y="10" width="80" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="znh-LN-Xi3"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="fm100.png"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="40"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="立即登录" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sXf-Dh-ETp">
+                    <rect key="frame" x="110" y="30" width="100" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="MEK-6J-IVt"/>
+                        <constraint firstAttribute="width" secondItem="sXf-Dh-ETp" secondAttribute="height" multiplier="2:1" id="bSi-iE-oUH"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" red="0.87058823529411766" green="0.42352941176470588" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="bSi-iE-oUH"/>
+                        </mask>
+                    </variation>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="登陆可下载节目" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kgb-XC-urf">
+                    <rect key="frame" x="496" y="30" width="84" height="40"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="0.62745098039215685" green="0.62745098039215685" blue="0.62745098039215685" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="sXf-Dh-ETp" firstAttribute="leading" secondItem="nqN-Tv-Vkr" secondAttribute="trailing" constant="10" id="06a-uy-GIo"/>
+                <constraint firstItem="sXf-Dh-ETp" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="30" id="2jL-Ok-034"/>
+                <constraint firstAttribute="trailing" secondItem="kgb-XC-urf" secondAttribute="trailing" constant="20" id="A0i-Wq-XBY"/>
+                <constraint firstItem="nqN-Tv-Vkr" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="P4L-dF-K42"/>
+                <constraint firstItem="kgb-XC-urf" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="30" id="VWi-wj-Jgf"/>
+                <constraint firstItem="nqN-Tv-Vkr" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="ZOG-LA-M5t"/>
+                <constraint firstAttribute="bottom" secondItem="sXf-Dh-ETp" secondAttribute="bottom" constant="30" id="dj0-9h-RD7"/>
+                <constraint firstAttribute="bottom" secondItem="kgb-XC-urf" secondAttribute="bottom" constant="30" id="lJb-MY-bEa"/>
+                <constraint firstAttribute="bottom" secondItem="nqN-Tv-Vkr" secondAttribute="bottom" constant="10" id="xfk-oK-hZ7"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="label1" destination="kgb-XC-urf" id="qYA-52-0yS"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="fm100.png" width="200" height="200"/>
+    </resources>
+</document>

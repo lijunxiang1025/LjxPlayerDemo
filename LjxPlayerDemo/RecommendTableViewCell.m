@@ -21,6 +21,10 @@
     self.bt2.tag =502;
     self.bt3.tag =503;
 
+    [self.bt1 addTarget:self action:@selector(click:) forControlEvents:UIControlEventTouchUpInside];
+    [self.bt2 addTarget:self action:@selector(click:) forControlEvents:UIControlEventTouchUpInside];
+    [self.bt3 addTarget:self action:@selector(click:) forControlEvents:UIControlEventTouchUpInside];
+
     
     [self.bt1 sd_setBackgroundImageWithURL:[NSURL URLWithString:[dataArray[0] objectForKey:@"cover"]] forState:UIControlStateNormal placeholderImage:[UIImage imageNamed:@"sy.jpg"] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         
@@ -41,6 +45,12 @@
      self.label2.text = [dataArray[1] objectForKey:@"title"];
     self.label3.text = [dataArray[2] objectForKey:@"title"];
   
+    
+}
+- (void)click:(UIButton*)bt{
+    
+    self.click(bt.tag-500);
+    
     
 }
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

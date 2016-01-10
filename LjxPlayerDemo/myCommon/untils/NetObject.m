@@ -9,9 +9,7 @@
 #import "NetObject.h"
 
 @implementation NetObject
-+(NSInteger )checkNet{
-
-   __block NSInteger  a = 1 ;
+-(void )checkNet{
     
     AFNetworkReachabilityManager *manager = [AFNetworkReachabilityManager sharedManager];
     [manager startMonitoring];
@@ -19,32 +17,39 @@
     switch (status) {
         case AFNetworkReachabilityStatusReachableViaWiFi:
         {   //wifi;
-            
-            break;
+            self.block(1);
         }
+            break;
         case AFNetworkReachabilityStatusUnknown:
         {
             //未知
-            break;
+            self.block(3);
         }
+            break;
+
         case AFNetworkReachabilityStatusNotReachable:
         {
             //无连接
-            a = 0;
-            break;
+            self.block(0);
+            
         }
+            break;
+
         case AFNetworkReachabilityStatusReachableViaWWAN:
         {
             //4G网
-            a = 2;
-            break;
+            self.block(2);
         }
+            break;
+
         default:
             break;
     
     }
 }];
-    return a;
+    
+    
+    
     
 }
 

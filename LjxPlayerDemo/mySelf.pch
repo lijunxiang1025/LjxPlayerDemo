@@ -5,11 +5,26 @@
 
 #define ScreenHeight [UIScreen mainScreen].bounds.size.height
 
+//   self.layer.masksToBounds = YES;
+//self.layer.cornerRadius  = 40;
+#define WIDTH    [UIScreen mainScreen].bounds.size.width
+#define HEITHT   [UIScreen mainScreen].bounds.size.height
+
 #ifdef __OBJC__
 
 
 #import "LjxUi.h"
 #import "AFNetworking.h"
 #import "DeveiceUntils.h"
+#import "MJRefresh.h"
+#import "NetObject.h"
+#import "UIImageView+WebCache.h"
+#import "UIButton+WebCache.h"
+#import "commonUtils.h"
+#import "KVNProgress.h"
+#import "MyPlayer.h"
+#import "UIImage+tools.h"
+#import "UIColor+tools.h"
+#import "MySmallPlayView.h"
 
 #endif

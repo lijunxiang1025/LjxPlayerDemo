@@ -125,7 +125,7 @@
     
     NSLog(@"-----%ld",control.tag);
     
-    
+    self.click(control.tag);
     
     
     

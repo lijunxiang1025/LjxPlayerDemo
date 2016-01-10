@@ -7,7 +7,7 @@
 //
 
 #import "MainTabBarController.h"
-
+#import "MyNav.h"
 @interface MainTabBarController ()<UITabBarControllerDelegate>
 
 @end
@@ -38,7 +38,7 @@
         Class Vc = NSClassFromString(viewName);
         UIViewController * _vc = [[Vc alloc]init];
         _vc.tabBarItem = [[UITabBarItem alloc]initWithTitle:titleArr[i] image:[[UIImage imageNamed:unSelectImageArr[i]]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:imageArray[i]]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
-        UINavigationController * _nav = [[UINavigationController alloc]initWithRootViewController:_vc];
+        MyNav * _nav = [[MyNav alloc]initWithRootViewController:_vc];
         [_viewArr addObject:_nav];
         if (i==2) {
             _vc.navigationController.navigationBar.hidden=NO;

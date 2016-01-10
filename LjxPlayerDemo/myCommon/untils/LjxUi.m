@@ -12,7 +12,7 @@
 + (UIImageView*)createImageView:(CGRect)cg andName:(NSString*)imageName{
     
     UIImageView * imageVew = [[UIImageView alloc]initWithFrame:cg];
-    
+    imageVew.userInteractionEnabled  = YES;
     imageVew.image = [UIImage imageNamed:imageName];
     imageVew.userInteractionEnabled = YES;
     return imageVew;

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+typedef void (^returnBt)(NSInteger);
 @interface RadioTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *label3;
 @property (weak, nonatomic) IBOutlet UILabel *label2;
@@ -20,6 +20,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *label1;
 @property (weak, nonatomic) IBOutlet UIButton *goOther;
 
+@property(nonatomic,copy)returnBt dtBlock;
 
 - (void)configWith:(NSArray*)dataArr;
+
 @end

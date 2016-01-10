@@ -83,7 +83,6 @@
     
 //    MainTabBarController * mainTabBar = [[MainTabBarController alloc]initWithSelectImageArr:@[@"homeSelected@2x",@"foundSelected@2x",@"communitySelected@2x",@"mySelected@2x",@"installSelected@2x"] andUnSelectImageArr:@[@"home@2x",@"found@2x",@"community@2x",@"my@2x",@"install@2x"] andViewControllerArr:@[@"HoomViewController@2x",@"FindViewController@2x",@"CommunityViewController@2x",@"MyViewController@2x",@"InstallViewController@2x"] andTitleNameArr:@[@"首页",@"发现",@"社区",@"我的",@"设置"]];
 //    
-//    
 //    [self presentViewController:mainTabBar animated:YES completion:nil];
     [[NSNotificationCenter defaultCenter]postNotificationName:@"goMain" object:nil];
 }
